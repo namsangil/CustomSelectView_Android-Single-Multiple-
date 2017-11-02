@@ -6,29 +6,62 @@
     android:layout_height="match_parent"
     tools:context="n.customselectview.MainActivity">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="30dp">
+        android:layout_height="match_parent">
 
-        <n.customselectview.customSelectView.CustomSelectView
-            android:id="@+id/single_select_view"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="35dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp">
 
-        </n.customselectview.customSelectView.CustomSelectView>
-        <n.customselectview.customSelectView.CustomSelectView
-            android:id="@+id/multi_select_view"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="200dp"
 
-        </n.customselectview.customSelectView.CustomSelectView>
+            >
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/single_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="single key"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/multi_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="multiple keys"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <n.customselectview.customSelectView.CustomSelectView
+                android:id="@+id/single_select_view"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+            </n.customselectview.customSelectView.CustomSelectView>
+
+            <n.customselectview.customSelectView.CustomSelectView
+                android:id="@+id/multi_select_view"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+            </n.customselectview.customSelectView.CustomSelectView>
+        </LinearLayout>
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>
